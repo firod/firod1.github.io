@@ -12,22 +12,22 @@
 
 @font-face {
   font-family: "SSSocial";
-  src: url('ss-social-circle.eot')/*tpa=http://weavesilk.com/font/ss-social/ss-social-circle.eot*/;
-  src: url('ss-social-circle.eot-#iefix')/*tpa=http://weavesilk.com/font/ss-social/ss-social-circle.eot?#iefix*/ format('embedded-opentype'),
-       url('ss-social-circle.woff')/*tpa=http://weavesilk.com/font/ss-social/ss-social-circle.woff*/ format('woff'),
-       url('ss-social-circle.ttf')/*tpa=http://weavesilk.com/font/ss-social/ss-social-circle.ttf*/ format('truetype'),
-       url('ss-social-circle.svg#SSSocialCircle')/*tpa=http://weavesilk.com/font/ss-social/ss-social-circle.svg#SSSocialCircle*/ format('svg');
+  src: url('ss-social-circle.eot')/*tpa=http://borich.tk/ss-social-circle.eot*/;
+  src: url('ss-social-circle.eot-#iefix')/*tpa=http://borich.tk/ss-social-circle.eot-#iefix*/ format('embedded-opentype'),
+       url('ss-social-circle.woff')/*tpa=http://borich.tk/ss-social-circle.woff*/ format('woff'),
+       url('ss-social-circle.ttf')/*tpa=http://borich.tk/ss-social-circle.ttf*/ format('truetype'),
+       url('ss-social-circle.svg#SSSocialCircle')/*tpa=http://borich.tk/ss-social-circle.svg#SSSocialCircle*/ format('svg');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SSSocial";
-  src: url('ss-social-regular.eot')/*tpa=http://weavesilk.com/font/ss-social/ss-social-regular.eot*/;
-  src: url('ss-social-regular.eot-#iefix')/*tpa=http://weavesilk.com/font/ss-social/ss-social-regular.eot?#iefix*/ format('embedded-opentype'),
-       url('ss-social-regular.woff')/*tpa=http://weavesilk.com/font/ss-social/ss-social-regular.woff*/ format('woff'),
-       url('ss-social-regular.ttf')/*tpa=http://weavesilk.com/font/ss-social/ss-social-regular.ttf*/ format('truetype'),
-       url('ss-social-regular.svg#SSSocialRegular')/*tpa=http://weavesilk.com/font/ss-social/ss-social-regular.svg#SSSocialRegular*/ format('svg');
+  src: url('ss-social-regular.eot')/*tpa=http://borich.tk/ss-social-regular.eot*/;
+  src: url('ss-social-regular.eot-#iefix')/*tpa=http://borich.tk/ss-social-regular.eot-#iefix*/ format('embedded-opentype'),
+       url('ss-social-regular.woff')/*tpa=http://borich.tk/ss-social-regular.woff*/ format('woff'),
+       url('ss-social-regular.ttf')/*tpa=http://borich.tk/ss-social-regular.ttf*/ format('truetype'),
+       url('ss-social-regular.svg#SSSocialRegular')/*tpa=http://borich.tk/ss-social-regular.svg#SSSocialRegular*/ format('svg');
   font-weight: normal;
   font-style: normal;
 }

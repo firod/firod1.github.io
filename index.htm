@@ -8,34 +8,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width">
 
-	<meta property="og:image" content="http://weavesilk.com/img/silk_thumb.png" />
-	<link rel="image_src" type="image/png" href="http://weavesilk.com/img/silk_thumb.png" />
-
+	
 	<meta property="og:description"content="Create beautiful flowing art with Silk."/>
 	
-	<link rel="shortcut icon" href="favicon.ico" tppabs="http://weavesilk.com/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="normalize.css" tppabs="http://weavesilk.com/css/normalize.css" />
-	<link rel="stylesheet" href="font-awesome.css" tppabs="http://weavesilk.com/css/font-awesome.css" />
-	<link rel="stylesheet" href="ss-social.css" tppabs="http://weavesilk.com/css/ss-social.css" />
-	<link rel="stylesheet" href="site.css" tppabs="http://weavesilk.com/css/site.css" />
+	<link rel="shortcut icon" href="favicon.ico" tppabs="http://borich.tk/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="normalize.css" tppabs="http://borich.tk/normalize.css" />
+	<link rel="stylesheet" href="font-awesome.css" tppabs="http://borich.tk/font-awesome.css" />
+	<link rel="stylesheet" href="ss-social.css" tppabs="http://borich.tk/ss-social.css" />
+	<link rel="stylesheet" href="site.css" tppabs="http://borich.tk/site.css" />
 
-	<script src="jquery-1.8.1.min.js" tppabs="http://weavesilk.com/js/jquery-1.8.1.min.js"></script>
-	<script src="jquery.fullscreen.js" tppabs="http://weavesilk.com/js/jquery.fullscreen.js"></script>
-	<script src="underscore.min.js" tppabs="http://weavesilk.com/js/underscore.min.js"></script>
-	<script src="knockout-2.2.0.min.js" tppabs="http://weavesilk.com/js/knockout-2.2.0.min.js"></script>
-	<script src="d3.v3.min.js" tppabs="http://weavesilk.com/js/d3.v3.min.js"></script>
-	<script src="keymaster.js" tppabs="http://weavesilk.com/js/keymaster.js"></script>
-	<script src="noise.js" tppabs="http://weavesilk.com/js/noise.js"></script>
-	<script src="detect.js" tppabs="http://weavesilk.com/js/detect.js"></script>
-	<script src="site.js" tppabs="http://weavesilk.com/js/site.js"></script>
+	<script src="jquery-1.8.1.min.js" tppabs="http://borich.tk/jquery-1.8.1.min.js"></script>
+	<script src="jquery.fullscreen.js" tppabs="http://borich.tk/jquery.fullscreen.js"></script>
+	<script src="underscore.min.js" tppabs="http://borich.tk/underscore.min.js"></script>
+	<script src="knockout-2.2.0.min.js" tppabs="http://borich.tk/knockout-2.2.0.min.js"></script>
+	<script src="d3.v3.min.js" tppabs="http://borich.tk/d3.v3.min.js"></script>
+	<script src="keymaster.js" tppabs="http://borich.tk/keymaster.js"></script>
+	<script src="noise.js" tppabs="http://borich.tk/noise.js"></script>
+	<script src="detect.js" tppabs="http://borich.tk/detect.js"></script>
+	<script src="site.js" tppabs="http://borich.tk/site.js"></script>
 
 	<title>Silk &ndash; Interactive Generative Art</title>
 </head>
 
-<body data-bind="css: { 'iphone': isIPhone, 'right-side-up': isRightSideUp, 'silk-active': silkActive, 'mouse-over-previewable-controls': mouseOverControls, 'mouse-down-on-slider': mouseDownOnSlider }">
-	<!-- https://itunes.apple.com/us/app/id436590129?mt=8&ls=1 -->
+<body data-bind="css: { 'right-side-up': isRightSideUp, 'silk-active': silkActive, 'mouse-over-previewable-controls': mouseOverControls, 'mouse-down-on-slider': mouseDownOnSlider }">
+	
 	<!-- http://goo.gl/urr6sT--> 
-	<a href="javascript:if(confirm(%27https://goo.gl/oIIuif  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://goo.gl/oIIuif%27" tppabs="https://goo.gl/oIIuif" id="iphone-image-link"> </a>
 	
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
@@ -55,7 +52,7 @@
 				</div>
 
 				<div id="share-wrap">
-					<div class="btn" id="btn-share" data-bind="click: shareButtonClick, css: { visible: showShareButton, disabled: shareDisabled, loading: shareLoading, 'hide': showShareOptions }">
+					<div class="btn" id="btn-share" data-bind="click: shareButtonClick, css: {disabled: shareDisabled, loading: shareLoading, 'hide': showShareOptions }">
 						<div class="text">Share</div>
 						<div class="loading-stripes"></div>
 					</div>
@@ -157,7 +154,7 @@
 
 		<div id="sound-and-about" class="controls-container">
 			<div class="row social-row">
-				<div class="btn silk-icon" id="about-button" data-bind="click: toggleAbout, css: { visible: notPristine }">
+				<div class="btn silk-icon" id="about-button" data-bind="click: toggleAbout, css: { visible: notPristine }" ondblclick="return about-button_ondblclick()" onclick="return about-button_onclick()" onkeydown="return about-button_onkeydown()" onkeyup="return about-button_onkeyup()">
 					<div class="contents">?</div>
 					<div class="tt">About</div>
 				</div>
@@ -173,17 +170,17 @@
 					<div class="fb-like" data-href="javascript:if(confirm(%27https://www.facebook.com/pages/Silk/135022713223750?ref=ts&fref=ts  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://www.facebook.com/pages/Silk/135022713223750?ref=ts&fref=ts%27" tppabs="https://www.facebook.com/pages/Silk/135022713223750?ref=ts&fref=ts" data-send="false" data-layout="button_count" data-width="50" data-show-faces="true" data-colorscheme="dark" data-font="lucida grande"></div>
 
 					<a href="javascript:if(confirm(%27https://twitter.com/tweetsilk  \n\nThis file was not retrieved by Teleport Pro, because it is addressed using an unsupported protocol (e.g., gopher).  \n\nDo you want to open it from the server?%27))window.location=%27https://twitter.com/tweetsilk%27" tppabs="https://twitter.com/tweetsilk" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false"></a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="widgets.js"/*tpa=http://platform.twitter.com/widgets.js*/;fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="widgets.js"/*tpa=http://borich.tk/widgets.js*/;fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 			</div>
 			<div class="app-link-container row" data-bind="css: { visible: notPristine }">
 			</div>
 			<div class="row about-row" data-bind="css: { visible: showAbout }">
-				<p>Silk was made by Yuri Vishnevsky, with <a href="javascript:if(confirm(%27http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30%27" tppabs="http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30">music</a> and sound crafted by <a href="javascript:if(confirm(%27http://microscopics.co.uk/  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://microscopics.co.uk/%27" tppabs="http://microscopics.co.uk/">Mat Jarvis</a>.</p>
+				<p>Borich was made by Vladislav Borichevskij with <a href="javascript:if(confirm(%27http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30%27" tppabs="http://click.linksynergy.com/fs-bin/stat?id=1KYVs20MuZw&offerid=146261&type=3&subid=0&tmpid=1826&RD_PARM1=https%253A%252F%252Fitunes.apple.com%252Fus%252Falbum%252Fthe-world-forgotten-single%252Fid579359664%253Fuo%253D4%2526partnerId%253D30">music</a> and sound crafted by Viktor Timinov.</p>
 
-				<p>Art shared with Silk is licensed under <a href="javascript:if(confirm(%27http://creativecommons.org/licenses/by/3.0/deed.en_US  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://creativecommons.org/licenses/by/3.0/deed.en_US%27" tppabs="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons</a>.</p>
+				<p>Art shared with Borich is licensed under comannd.</p>
 
-				<p>If you enjoyed Silk, please <a href="mailto:yurivish@gmail.com">let me know</a>!</p>
+				<p>If you enjoyed Borich, please <a href="mailto:fff13457rf@gmail.com">let me know</a>!</p>
 
 			</div>
 		</div>
@@ -198,21 +195,18 @@
 		<img data-bind="attr: { src: shareUrlThumbnail }" width="150" />
 		<div class="tt">Hide thumbnail</div>
 	</div>
-	<!-- https://itunes.apple.com/us/app/id436590129?mt=8&ls=1 -->
-	<a href="javascript:if(confirm(%27http://goo.gl/oIIuif  \n\nThis file was not retrieved by Teleport Pro, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://goo.gl/oIIuif%27" tppabs="http://goo.gl/oIIuif" id="appstore-badge">
-		<!-- <img src="img/now_on_ios.png" id="now-on-ios" width="135" /> -->
-		<!-- <img src="img/app_thumb.png" id="app-thumb" width="135" /> -->
+		
 		<div id="announcement" data-bind="css: { visible: showBigAnnouncement }">
 			<!-- <div data-bind="click: closeAnnouncement, css: { 'ad-showing-unnecessarily': notShowBigAnnouncementDefault, 'close-pressed': announcementClosePressed }" class="close-button">X</div> -->
-			<img src="announcement.png" tppabs="http://weavesilk.com/img/announcement.png" id="app-announcement" width="170" />
-			<img src="announcement_hover.png" tppabs="http://weavesilk.com/img/announcement_hover.png" id="app-announcement-hover" width="170" />
+			<img src="announcement.png" tppabs="http://borich.tk/announcement.png" id="app-announcement" width="170" />
+			<img src="announcement_hover.png" tppabs="http://borich.tk/announcement_hover.png" id="app-announcement-hover" width="170" />
 		</div>
 
 		<div id="badge" data-bind="css: { visible: showAnyAnnouncement } ">
 			<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-				 width="135px" height="40px" viewBox="0 0 135 40" enable-background="new 0 0 135 40" tppabs="http://weavesilk.com/new 0 0 135 40" xml:space="preserve">
+				 width="135px" height="40px" viewBox="0 0 135 40" enable-background="new 0 0 135 40" tppabs="http://borich.tk/new 0 0 135 40" xml:space="preserve">
 			<g>
 				<path fill="#FFFFFF" d="M134.032,35.268c0,2.116-1.714,3.83-3.834,3.83H4.729c-2.119,0-3.839-1.714-3.839-3.83V4.725
 					c0-2.115,1.72-3.835,3.839-3.835h125.468c2.121,0,3.834,1.72,3.834,3.835L134.032,35.268L134.032,35.268z"/>
@@ -332,12 +326,12 @@
 		</div>
 	</a>
 	<div id="intro-center" data-bind="css: { visible: showIntro }">
-		<img class="logo" src="silk_text.png" tppabs="http://weavesilk.com/img/silk_text.png" width="250" height="250" />
+		<img class="logo" src="silk_text.png" tppabs="http://borich.tk/silk_text.png" width="250" height="250" />
 	</div>
 
 	<div id="intro-draw-something" data-bind="css: { visible: showIntro }">
 		<!-- <div id="instructions">Draw something.</div> -->
-		<img class="draw-something" src="draw_something.png" tppabs="http://weavesilk.com/img/draw_something.png" width="250" height="29" />
+		<img class="draw-something" src="draw_something.png" tppabs="http://borich.tk/draw_something.png" width="250" height="29" />
 	</div>
 	<div id="intro-mute-option" data-bind="css: { visible: false }">
 		<em>Note</em> &mdash; Silk has sound. 
@@ -357,18 +351,34 @@
 	</div>
 
 	<audio id="bg-music" preload="auto" loop="true" >
-		<source src="Silkura -May 02 -loop.m4a" tppabs="http://yurivish.com/Silk%20Static/Silkura%20-May%2002%20-loop.m4a" type='audio/mp4; codecs="mp4a.40.5"'/>
-		<source src="Silkura -May 02 -loop.ogg" tppabs="http://yurivish.com/Silk%20Static/Silkura%20-May%2002%20-loop.ogg" type='audio/ogg; codecs="vorbis'/>
+		<source src="Silkura -May 02 -loop.m4a" tppabs="http://borich.tk/Silkura -May 02 -loop.m4a" type='audio/mp4; codecs="mp4a.40.5"'/>
+		<source src="Silkura -May 02 -loop.ogg" tppabs="http://borich.tk/Silkura -May 02 -loop.ogg" type='audio/ogg; codecs="vorbis'/>
 	</audio>
 
 	<audio id="bg-music-intro" preload="auto">
-		<source src="Startup 1 16-44.m4a" tppabs="http://yurivish.com/Silk%20Static/Startup%201%2016-44.m4a" type='audio/mp4; codecs="mp4a.40.5"'/>
-		<source src="Startup 1 16-44.ogg" tppabs="http://yurivish.com/Silk%20Static/Startup%201%2016-44.ogg" type='audio/ogg; codecs="vorbis'/>
+		<source src="Startup 1 16-44.m4a" tppabs="http://borich.tk/Startup 1 16-44.m4a" type='audio/mp4; codecs="mp4a.40.5"'/>
+		<source src="Startup 1 16-44.ogg" tppabs="http://borich.tk/Startup 1 16-44.ogg" type='audio/ogg; codecs="vorbis'/>
 	</audio>
 
-	<script src="js.js" tppabs="http://static.getclicky.com/js" type="text/javascript"></script>
-	<script type="text/javascript">try{ clicky.init(66625145); }catch(e){}</script>
-	<noscript><p><img alt="Clicky" width="1" height="1" src="66625145ns.gif" tppabs="http://in.getclicky.com/66625145ns.gif" /></p></noscript>
+	<script src="js.js" tppabs="http://borich.tk/js.js" type="text/javascript"></script>
+	<script type="text/javascript">try{ clicky.init(66625145); }catch(e){}function about-button_ondblclick() {
+
+}
+
+function about-button_onclick() {
+
+}
+
+function about-button_onkeydown() {
+
+}
+
+function about-button_onkeyup() {
+
+}
+
+</script>
+	<noscript><p><img alt="Clicky" width="1" height="1" src="66625145ns.gif" tppabs="http://borich.tk/66625145ns.gif" /></p></noscript>
 
 </body>
 </html>
